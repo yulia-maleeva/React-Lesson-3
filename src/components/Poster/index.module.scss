@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.poster {
+  width: 235px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
+.result {
+  text-align: end;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modalWindow {
+  width: 235px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.modalItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.image {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
