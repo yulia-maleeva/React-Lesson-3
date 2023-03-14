@@ -6,11 +6,25 @@ import styles from "./index.module.scss";
 const Poster = ({ src, alt, color, name, data }) => {
   const [toggle, setToggle] = useState(false);
 
+  const calculateTotalRevenue = () => {
+    let sum = 0;
+
+    data.map((item, index) => {
+      if (item.amount) {
+        sum += item.amount;
+      }
+    });
+
+    return sum ? (
+      <p className={styles.result}>${sum}</p>
+    ) : (
+      <p className={styles.result}>{data.length}</p>
+    );
+  };
+
   const openModal = () => {
     setToggle(!toggle);
   };
-
-  let sum = 0;
 
   return (
     <div className={styles.container}>
@@ -23,16 +37,7 @@ const Poster = ({ src, alt, color, name, data }) => {
         />
         <div className={styles.infoContainer}>
           <b>{name}</b>
-          {data.map((item, index) => {
-            if (item.amount) {
-              sum += item.amount;
-            }
-          })}
-          {sum ? (
-            <p className={styles.result}>${sum}</p>
-          ) : (
-            <p className={styles.result}>{data.length}</p>
-          )}
+          {calculateTotalRevenue()}
         </div>
       </div>
       {toggle && (

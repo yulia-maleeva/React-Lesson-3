@@ -1,12 +1,10 @@
 import React from "react";
 import Poster from "../../components/Poster";
 
-import styles from "./index.module.scss";
-
-import DollarSvg from "../../assests/icons/DollarSvg.svg";
-import CartSvg from "../../assests/icons/CartSvg.svg";
-import MessageSvg from "../../assests/icons/MessageSvg.svg";
-import UserSvg from "../../assests/icons/UserSvg.svg";
+import DollarSvg from "../../assests/icons/dollarSvg.svg";
+import CartSvg from "../../assests/icons/cartSvg.svg";
+import MessageSvg from "../../assests/icons/messageSvg.svg";
+import UserSvg from "../../assests/icons/userSvg.svg";
 
 import {
   revenueList,
@@ -14,6 +12,8 @@ import {
   reviewsList,
   customersList,
 } from "../../mockData";
+
+import styles from "./index.module.scss";
 
 const MainPage = () => {
   return (
